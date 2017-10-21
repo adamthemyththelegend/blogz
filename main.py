@@ -28,10 +28,10 @@ def newpost():
 
         if not title:
             flash('Please enter something as a title', 'error')
-            return redirect('/newpost')
+            return render_template('newpost.html', body=body)
         elif not body:
             flash('Please enter something as a post', 'error')
-            return redirect('/newpost')
+            return render_template('newpost.html', title=title)
 
         else:
             new_blog = Blog(title, body)
