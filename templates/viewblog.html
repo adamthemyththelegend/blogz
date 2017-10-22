@@ -6,4 +6,6 @@
 
 <p>{{blog_id.body}}</p>
 
+<p class="user">Written by <a href="/blog?user={{blog_id.owner_id}}">{{blog_id.owner.username}}</a></p>
+
 {% endblock %}

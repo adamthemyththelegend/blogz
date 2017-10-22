@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1 style="text-align: center;">Build a Blog</h1>
+    <h1 style="text-align: center;">Blog Posts</h1>
 
     {% if blogs|length == 0 %}
     <p>No blogs yet</p>
@@ -10,6 +10,7 @@
             {% for blogpost in blogs %}
             <h2><a href="/blog?id={{blogpost.id}}">{{blogpost.title}}</a></h2>
             <p>{{blogpost.body}}</p>
+            <p class="user">Written by <a href="/blog?user={{blogpost.owner_id}}">{{blogpost.owner.username}}</a></p>
             <hr />
             {% endfor %}
 

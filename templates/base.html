@@ -6,13 +6,21 @@
             .error {
                 color: red;
             }
+            .user {
+                font-style: italic;
+                font-size: 12px;
+            }
         </style>
     </head>
 <body>
 
     <div>
-        <a href='/blog'>Main Blog Page</a>
-        <a href='/newpost'>Add a Blog Entry</a>
+        |
+        <a href='/'>Home</a> |
+        <a href='/blog'>Main Blog Page</a> |
+        <a href='/newpost'>Add a Blog Entry</a> |
+        <a href='/login'>Log in</a> |
+        <a href='/logout'>Log out</a> |
     </div>
 
     {% with messages = get_flashed_messages(with_categories=True) %}
